@@ -11,6 +11,7 @@ foreach (string name in names)
 }
 
 
+System.Console.WriteLine("this is IEnumerator.");
 IEnumerator e = names.GetEnumerator();
 while (e.MoveNext())
 {
