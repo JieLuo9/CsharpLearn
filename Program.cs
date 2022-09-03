@@ -1,7 +1,20 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
-Console.WriteLine("Current time is " + DateTime.Now);
+﻿using System.Runtime.Intrinsics.Arm;
+using System.ComponentModel.Design.Serialization;
+using System.Linq.Expressions;
+using System.Text;
+using System.Collections;
+
+string[] names = { "Bob", "Otto", "Kavin" };
+foreach (string name in names)
 {
-  int a = 0;
+  System.Console.WriteLine(name);
 }
-//Console.WriteLine(a);
+
+
+IEnumerator e = names.GetEnumerator();
+while (e.MoveNext())
+{
+  string name = (string)e.Current;
+  System.Console.WriteLine(name);
+}
+
